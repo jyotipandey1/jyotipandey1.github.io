@@ -1,0 +1,7 @@
+{
+    "id": 101,
+    "name": "Pizza Margherita",
+    "price": "400",
+    "path": "../assets/images/pizza-1.jpg",
+    "description": "Inspired by the pizza at Bar Del Corso, this Pizza Margherita features tomato sauce, mozzarella, and basil, with just a hint of sea salt."
+}
