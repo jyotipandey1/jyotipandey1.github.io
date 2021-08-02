@@ -1,0 +1,49 @@
+<div>
+    <div class="container-md">
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-7">
+                <h3>{{pizzadetail?.name}}</h3>
+            </div>
+        </div><br />
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid" style="height: 60vh; width:90%" src="{{pizzadetail?.path}}" />
+            </div>
+            <div class="col-md-6">
+                <h3>Description:</h3>
+                <br />
+                <p>{{pizzadetail?.description}}</p>
+                <br />
+                <p><b>Price:</b> Rs: {{pizzadetail?.price}}</p>
+                <br />
+                <!-- <div class="col-sm-1"> 
+                    <p><b>Quantity:</b></p>                
+                </div>
+                <div class="col-sm-2"> 
+                    <input type="text" class="form-control"/>
+                </div>
+                <br /> -->
+                <span class="col-sm-3">
+                    <button class="btn btn-success" (click) = "addToCart(pizzadetail)" data-target="#confirmation" data-toggle="modal">
+                        <i class="fa fa-shopping-cart"></i>&nbsp;Add To Cart</button>
+                </span>
+                <span class="col-sm-6">
+                    <button class="btn btn-danger" routerLink="/menu"><i class="fa fa-arrow-left"></i>&nbsp;Back</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                Pizza is added to cart successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" [routerLink]="['/cart']"  data-dismiss="modal">Go to Cart</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

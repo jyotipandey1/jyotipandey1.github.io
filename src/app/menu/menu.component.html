@@ -1,0 +1,50 @@
+<div>
+    <div class="container-md">
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-7">
+                <h3>Pizza Menu</h3>
+            </div>
+        </div><br />
+        <div class="row" >
+            <!-- <div class="col-md-6">
+                <p>{{p.name}}</p>
+            </div>
+            <div class="col-md-6">
+                <p><b>Price:</b> Rs: {{p.price}}</p>
+            </div> -->
+            <table class="table table-bordered">
+                <thead>
+                    <th>Pizza Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of pizza">
+                        <td>{{p.name}}</td>
+                        <td>Rs. {{p.price}}</td>
+                        <td><a class="btn btn-primary" [routerLink]="['/pizzas',p.id]"
+                            data-toggle="tooltip" data-placement="top" title="View Details">
+                            <i class="fa fa-eye"></i></a>&nbsp;&nbsp;
+                            <button class="btn btn-success" (click)="addToCart(p)" data-target="#confirmation" 
+                            data-toggle="modal" 
+                            data-placement="top" title="Add To Cart"><i class="fa fa-shopping-cart"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                Pizza is added to cart successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" [routerLink]="['/cart']"  data-dismiss="modal">Go to Cart</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
