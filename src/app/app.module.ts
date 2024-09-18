@@ -34,7 +34,7 @@ import { AboutComponent } from './about/about.component';
     { path: 'welcome', component: WelcomeComponent },
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
-], { relativeLinkResolution: 'legacy' }),
+], {}),
     HttpClientModule
   ],
   providers: [],
