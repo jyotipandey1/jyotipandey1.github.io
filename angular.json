@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "restaurant:build"
+            "buildTarget": "restaurant:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "restaurant:build:production"
+              "buildTarget": "restaurant:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "restaurant:build"
+            "buildTarget": "restaurant:build"
           }
         },
         "test": {
