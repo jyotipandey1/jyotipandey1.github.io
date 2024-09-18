@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx lint",
+    "e2e": "nx e2e"
   },
   "private": true,
   "dependencies": {
@@ -27,8 +27,13 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^18.2.4",
+    "@angular-devkit/schematics": "^18.2.4",
     "@angular/cli": "^18.2.4",
     "@angular/compiler-cli": "^18.2.4",
+    "@nx/angular": "19.7.3",
+    "@nx/workspace": "19.7.3",
+    "@schematics/angular": "^18.2.4",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -40,6 +45,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "nx": "19.7.3",
     "ts-node": "~8.3.0"
   }
 }
