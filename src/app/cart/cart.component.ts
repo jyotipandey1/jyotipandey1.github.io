@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { IPizza } from '../menu/pizza';
 import { PizzaService } from '../menu/pizza.service';
 
@@ -12,8 +11,8 @@ export class CartComponent implements OnInit {
 
   item: IPizza[] = [];
   id: number;
-  errormsg: any;
-  sum: number = 0;
+  errormsg: string;
+  sum = 0;
   constructor(private pizzaService: PizzaService) { }
 
   ngOnInit(): void {
@@ -29,8 +28,8 @@ export class CartComponent implements OnInit {
 
   calculatePrice(){
     this.sum = 0;
-    for(let i=0; i<this.item.length; i++){
-      this.sum+=parseInt(`${this.item[i].price}`, 10);
+    for(const i of this.item){
+      this.sum+=parseInt(`${i.price}`, 10);
     }
   }
 

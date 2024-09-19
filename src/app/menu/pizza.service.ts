@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { IPizza } from './pizza';
-import { tap, catchError, filter } from 'rxjs/operators'
+import { tap, catchError } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'

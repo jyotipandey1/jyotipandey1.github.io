@@ -12,7 +12,7 @@ import { PizzaService } from '../pizza.service';
 export class PizzaDetailComponent implements OnInit {
 
   sub: Subscription | undefined;
-  errormsg: any;
+  errormsg: string;
   id: number;
   //pizza1: IPizza[] = [];
   constructor(private route: ActivatedRoute, private router: Router, private pizzaService: PizzaService) { }

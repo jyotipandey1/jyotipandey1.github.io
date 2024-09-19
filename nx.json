@@ -11,6 +11,12 @@
         "^production"
       ]
     },
+    "lint": {
+        "executor": "@nx/eslint:lint",
+        "options": {
+        "lintFilePatterns": ["src/app/**/*.ts"]
+      }
+    },
     "test": {
       "cache": true,
       "inputs": [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IPizza } from '../menu/pizza';
 import { PizzaService } from '../menu/pizza.service';
 
@@ -7,7 +7,7 @@ import { PizzaService } from '../menu/pizza.service';
   templateUrl: './special.component.html',
   styleUrls: ['./special.component.css']
 })
-export class SpecialComponent implements OnInit {
+export class SpecialComponent {
   
   special: IPizza = {
     id: 103,
@@ -18,9 +18,6 @@ export class SpecialComponent implements OnInit {
     together. Tastes great with a glass of white wine.`
   };
   constructor(private pizzaService: PizzaService) { }
-
-  ngOnInit(): void {
-  }
 
   addToCart() {
     this.pizzaService.addToCart(this.special);

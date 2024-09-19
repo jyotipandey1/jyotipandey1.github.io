@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class MenuComponent implements OnInit {
 
-  errormsg: any;
+  errormsg: string;
   sub: Subscription | undefined;
   constructor(private pizzaService: PizzaService) { }
 

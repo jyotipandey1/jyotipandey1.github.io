@@ -63,6 +63,12 @@
         "{options.outputPath}"
       ]
     },
+    "lint": {
+        "executor": "@nx/eslint:lint",
+        "options": {
+        "lintFilePatterns": ["src/app/**/*.ts"]
+      }
+    },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
